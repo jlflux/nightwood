@@ -375,7 +375,7 @@ No “collect XP” pseudo-mini-game component. Results are computed from actual
 
 **State:** elapsed time, lane (0/1/2), lives (3), score, combo, spawn sequence, speed, input history, seed.
 
-**Timer:** 35–55 seconds in normal mode. Timer pauses when browser tab is hidden or the player explicitly pauses; it does **not** continue and punish the player while backgrounded.
+**Timer:** 25 seconds in the starter Quick Run; 45-second extended run is later content. Timer pauses when browser tab is hidden or the player explicitly pauses; it does **not** continue and punish the player while backgrounded.
 
 **Core logic:**
 1. Begin after a short one-screen instruction: “Switch lanes to dodge blocks. Collect nodes. Survive the timer.”
