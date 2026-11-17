@@ -5,7 +5,7 @@ const C=window.NightwoodCore;
 const $=id=>document.getElementById(id);
 const canvas=$("world"),ctx=canvas.getContext("2d"),screen=$("screen"),layer=$("screenLayer");
 const WIDTH=1500,HEIGHT=900,STORAGE="nightwood_save_v2";
-let save=null,tab="journal",mode="create",target=null,targetAction=null,near=null,keys=new Set();
+let save=null,tab="journal",mode="create",target=null,targetAction=null,waypoints=[],near=null,keys=new Set();
 let enemies=[],fx=[],particles=[],runner=null,stackGame=null,runCounter=0,charge=0,slashTime=0,attackCd=0,dodgeCd=0,dodgeTime=0,iframe=0,hitTimer=0,frameTime=performance.now(),elapsedUI=0,saveTick=0;
 let facing={x:0,y:1},cam={x:0,y:0},viewport={w:960,h:630},lightShift=0,spawnTimer=0,toastTimer=null,lastStory=false;
 const places=[
@@ -34,8 +34,8 @@ function saveGame(){
  try{localStorage.setItem(STORAGE,JSON.stringify(save));$("saveLabel").textContent="Saved";}catch(e){$("saveLabel").textContent="Save unavailable";} 
 }
 function loadGame(){try{return C.normalizeSave(JSON.parse(localStorage.getItem(STORAGE)));}catch(e){return null;}}
-function show(html,nextMode){screen.innerHTML=html;layer.classList.remove("hidden");mode=nextMode;keys.clear();target=null;}
-function close(){if(mode==="create")return;layer.classList.add("hidden");mode=null;target=null;renderPanel();}
+function show(html,nextMode){screen.innerHTML=html;layer.classList.remove("hidden");mode=nextMode;keys.clear();target=null;waypoints=[];}
+function close(){if(mode==="create")return;layer.classList.add("hidden");mode=null;target=null;waypoints=[];renderPanel();}
 function choiceScreen(title,description,choices){
  let html='<div class="tag">HOMEWOOD / NIGHTWOOD</div><h2>'+escapeHTML(title)+'</h2><p>'+escapeHTML(description)+'</p><div id="choices"></div>';
  show(html,"dialog");
@@ -71,21 +71,61 @@ function intersects(x,y){
  return blocks.some((b,i)=>i===1&&x>b.x-4&&x<b.x+b.w+4&&y>b.y-4&&y<b.y+b.h+4);
 }
 function relocate(x,y){if(!intersects(x,y))save.position={x,y};}
+// Small-grid pathfinding keeps click-to-move from walking into arcade/school roofs.
+// No external navmesh or art pack is required for the current map.
+function findPath(point,object){
+ const cell=32,cols=Math.ceil(WIDTH/cell),rows=Math.ceil(HEIGHT/cell);
+ const center=id=>({x:(id%cols+.5)*cell,y:(Math.floor(id/cols)+.5)*cell});
+ const startX=C.clamp(Math.floor(save.position.x/cell),0,cols-1),startY=C.clamp(Math.floor(save.position.y/cell),0,rows-1);
+ const start=startY*cols+startX,visited=new Uint8Array(cols*rows),prev=new Int32Array(cols*rows);
+ prev.fill(-1);const queue=[start];visited[start]=1;let best=start,bestDist=Infinity,found=false,head=0;
+ const dirs=[[0,1],[1,0],[0,-1],[-1,0],[1,1],[-1,1],[1,-1],[-1,-1]];
+ while(head<queue.length){
+  const node=queue[head++],at=center(node),d=dist(at,point);
+  if(d<bestDist){bestDist=d;best=node;}
+  if(d<(object?60:cell*.7)){best=node;found=true;break;}
+  const x=node%cols,y=Math.floor(node/cols);
+  for(const [dx,dy] of dirs){
+   const nx=x+dx,ny=y+dy;if(nx<0||ny<0||nx>=cols||ny>=rows)continue;
+   const id=ny*cols+nx;if(visited[id])continue;
+   const next=center(id);if(intersects(next.x,next.y))continue;
+   if(dx&&dy){const sideA=center(y*cols+nx),sideB=center(ny*cols+x);if(intersects(sideA.x,sideA.y)||intersects(sideB.x,sideB.y))continue;}
+   visited[id]=1;prev[id]=node;queue.push(id);
+  }
+ }
+ if(!found&&object&&bestDist>83)return [];
+ const route=[];let cursor=best;
+ while(cursor!==start&&cursor>=0){route.push(center(cursor));cursor=prev[cursor];}
+ route.reverse();
+ return route;
+}
 function chooseTarget(point,object){
+ if(!save||mode)return;
+ if(object&&dist(point,save.position)<73){target=null;targetAction=null;waypoints=[];interactObject(object);return;}
+ waypoints=findPath(point,object);
+ if(!waypoints.length){target=null;targetAction=null;if(object)toast("Can't reach that spot yet. Try approaching from the sidewalk.");return;}
  target=point;targetAction=object||null;
- if(dist(point,save.position)<52&&object){target=null;targetAction=null;interactObject(object);}
 }
 function movement(dt){
  if(!save||mode||runner)return;
  let vx=Number(keys.has("d")||keys.has("arrowright"))-Number(keys.has("a")||keys.has("arrowleft"));
  let vy=Number(keys.has("s")||keys.has("arrowdown"))-Number(keys.has("w")||keys.has("arrowup"));
- if(vx||vy){target=null;targetAction=null;}else if(target){vx=target.x-save.position.x;vy=target.y-save.position.y;if(Math.hypot(vx,vy)<8){const obj=targetAction;target=null;targetAction=null;if(obj&&dist(save.position,obj)<82)interactObject(obj);return;}}
- const magnitude=Math.hypot(vx,vy);if(magnitude<=0)return;vx/=magnitude;vy/=magnitude;facing={x:vx,y:vy};
+ if(vx||vy){target=null;targetAction=null;waypoints=[];}
+ else if(waypoints.length){
+  const next=waypoints[0];vx=next.x-save.position.x;vy=next.y-save.position.y;
+  if(Math.hypot(vx,vy)<10){
+   waypoints.shift();
+   if(!waypoints.length){const obj=targetAction;targetAction=null;target=null;if(obj&&dist(save.position,obj)<87)interactObject(obj);}
+   return;
+  }
+ }
+ const magnitude=Math.hypot(vx,vy);if(magnitude<=0)return;
+ vx/=magnitude;vy/=magnitude;facing={x:vx,y:vy};
  const speed=(175+(save.skills.athletics.level-1)*1.5)*(dodgeTime>0?2.9:1);
- let nx=save.position.x+vx*speed*dt,ny=save.position.y+vy*speed*dt;
+ const nx=save.position.x+vx*speed*dt,ny=save.position.y+vy*speed*dt;
  if(!intersects(nx,save.position.y))save.position.x=nx;
  if(!intersects(save.position.x,ny))save.position.y=ny;
- if(!mode){charge+=speed*dt;if(charge>170){charge=0;C.awardSkill(save,"athletics",1);}}
+ charge+=speed*dt;if(charge>170){charge=0;C.awardSkill(save,"athletics",1);}
 }
 function floatText(text,x,y,color){fx.push({kind:"text",text,x,y,life:1,color:color||"#e5eaf7"});}
 function soundRing(x,y,color){fx.push({kind:"ring",x,y,life:.5,max:.5,color:color||"#add6e8"});}
