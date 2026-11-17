@@ -1,0 +1,14 @@
+{
+  "name": "nightwood",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "Browser-first top-down supernatural RPG playable prototype",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "start": "npx --yes serve ."
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
