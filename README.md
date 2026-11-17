@@ -2,7 +2,17 @@
 
 **A modern-day, top-down supernatural RPG set between cozy Homewood and its shadow realm, Nightwood.**
 
-**Status:** Preproduction design and playable prototype development. See the repository root for source once implemented; design documents specify much more than is necessarily playable.
+**Status:** First playable, **asset-free browser prototype** committed to the repository. The full RPG/story and bosses are **planned**, not implemented.
+
+## Play the current prototype
+
+Open **index.html** in a browser (or deploy the repository as a static site to Vercel, selecting **Other** framework and no build command). No server, account, art assets or dependencies are needed to play. The game saves locally in the same browser; use **Export save** for a manual backup. The repository also has automated rule tests: **npm test** (requires Node 18+).
+
+**Controls:** WASD / arrow keys or click-to-move; **E** to interact; in Nightwood, **Space** swings the Night Splitter, **F** sends out a magic Pulse, **Shift** dodges. Touch movement/action buttons are present on smaller screens. Visit an arcade or library hotspot to play, then use the unlocked **Arcade** or **Library** shortcut for future quick sessions.
+
+**Implemented in the prototype:** chosen name + boy/girl + jacket color; an overhead Homewood map and Nightwood palette reflection; school/arcade/library/peer hotspots; sword discovery and travel between realms; stylized sword/magic combat; basic behaviors and silhouettes for all six monster species; a short Mistress Shade story teaser (not a boss battle); independent skill XP and profile; Ghost Circuit reflex game; Stacks 21 number-card mini-game; local saves, score records and export. The other bosses, full story, real interiors, deep crafting, cloud accounts and full relationship quests are **not yet implemented**.
+
+**Known prototype limitations:** No pathfinding around buildings for mouse movement, simplified enemy attacks, placeholder-like hand-drawn art, no online multiplayer or synced profiles. This is meant to test whether exploration + combat + short games is fun before producing a larger game.
 
 ## The story
 
