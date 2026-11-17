@@ -35,7 +35,7 @@ function saveGame(){
 }
 function loadGame(){try{return C.normalizeSave(JSON.parse(localStorage.getItem(STORAGE)));}catch(e){return null;}}
 function show(html,nextMode){screen.innerHTML=html;layer.classList.remove("hidden");mode=nextMode;keys.clear();target=null;}
-function close(){if(mode==="create"||mode==="arcade")return;layer.classList.add("hidden");mode=null;target=null;renderPanel();}
+function close(){if(mode==="create")return;layer.classList.add("hidden");mode=null;target=null;renderPanel();}
 function choiceScreen(title,description,choices){
  let html='<div class="tag">HOMEWOOD / NIGHTWOOD</div><h2>'+escapeHTML(title)+'</h2><p>'+escapeHTML(description)+'</p><div id="choices"></div>';
  show(html,"dialog");
