@@ -164,7 +164,7 @@ function friendChat(id){
   adrian:"Adrian has been cataloging recordings at the library. One of them sounds almost like a second school bell."
  };
  const choices=[
-  {label:"Talk and get to know "+friend.name,action:()=>{save.trust[id]=Math.min(30,(save.trust[id]||0)+1);if(!save.flags["friend_"+id]){save.flags["friend_"+id]=true;C.awardSkill(save,friend.skill,5);}saveGame();toast(friend.name+" appreciates the conversation.");}},
+  {label:"Talk and get to know "+friend.name,action:()=>{if(!save.flags["friend_"+id]){save.flags["friend_"+id]=true;save.trust[id]=Math.min(30,(save.trust[id]||0)+1);C.awardSkill(save,friend.skill,5);}saveGame();toast(friend.name+" appreciates the conversation.");}},
   {label:partner?"You're getting closer — spend a little time together":"Ask about hanging out together (optional romance)",action:()=>{C.choosePartner(save,id);saveGame();toast(friend.name+": \"I'd like that. Let's make some time.\"");}},
  ];
  if(id==="theo")choices.splice(1,0,{label:"Play Ghost Circuit together",action:()=>openArcade()});
