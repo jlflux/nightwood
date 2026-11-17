@@ -300,7 +300,7 @@ The campus changes as the story advances: a hallway's fluorescent lights begin f
 
 **Type:** Short three-lane reflex runner; one button/gesture for left and right, usable with mouse, keyboard, or touch.
 
-**Round length:** **35–55 seconds** including a short countdown and score display. There is no required long level select.
+**Round length:** **25 seconds in Quick Run; optional longer 45-second challenge later** including a short countdown and score display. There is no required long level select.
 
 **Rules:**
 - Your runner advances automatically through glowing gates.
