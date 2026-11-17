@@ -1,36 +1,36 @@
 # NIGHTWOOD
 
-**A modern supernatural browser RPG about surviving high school while secretly saving your city.**
+**A modern-day, top-down supernatural RPG set between cozy Homewood and its shadow realm, Nightwood.**
 
-> By day, you're just another student at Nightwood High. After the final bell, you are the only one holding a sword that can cut through the monsters hiding in plain sight.
+**Status:** Preproduction design and playable prototype development. See the repository root for source once implemented; design documents specify much more than is necessarily playable.
 
-**Status:** Preproduction / design specification. **No playable build has been implemented in this repository yet.**
+## The story
 
-## Start here
+You create your own high school student: **choose a name, choose boy or girl, and customize your look**. Your hometown **Homewood** is comfortable and familiar — school, arcade, library, neighborhood, friends. But overlapping it is **Nightwood**, an eerie realm inhabited by monsters. At school you discover **The Night Splitter**, an ancient sword that lets you fight in Nightwood and protect Homewood while trying to live a normal teenage life.
 
-1. **[Full Game Design Document](docs/GAME_DESIGN_DOCUMENT.md)** — canonical product vision, mechanics, progression, school-life systems, mini-games, world, UI, first-play experience, MVP boundaries, and acceptance criteria.
-2. **[Story & World Bible](docs/STORY_AND_WORLD_BIBLE.md)** — plot, protagonist, sword mythology, character relationships, factions, scene outlines, narrative rules, quest examples, and content design.
-3. **[Development & Technical Handoff](docs/DEVELOPMENT_HANDOFF.md)** — proposed browser architecture, data contracts, testable milestones, production plan, asset budget, and engineering acceptance tests.
+The Custodians track the shadow realm and its breaches. The initial monster families are **Strays, Shadewalkers, Howlers, Feeders, Nighthounds, Crawlers**. Planned early bosses are **Mistress Shade, The Warden, The Unseen King, Nyxara, The Maw, Astrix**, and **The Crown Council** (three bosses in one fight). The first prototype does **not** contain all of this content.
 
-## One-sentence description
+## Why it should be fun for 30 seconds or 30 minutes
 
-**Nightwood** is a top-down, single-player-first action RPG set in a modern American town, where a high school student finds a magical sword, discovers monsters around his school, develops everyday modern skills, and chooses how to spend his time — from 30 seconds of arcade games to 30 minutes of monster hunting.
+**30 seconds:** Stop at Quarterlight Arcade for Ghost Circuit or play Stacks 21 at the Homewood Public Library. Both are real, repeatable mini-games, not XP buttons.
 
-## Design pillars
+**5 minutes:** Practice the Night Splitter, level a modern skill, complete a short errand or fight a small monster encounter.
 
-- **A normal life and a secret life:** School, friendships, errands, part-time work, rumors, and keeping the supernatural secret matter as much as combat.
-- **A real playable world:** Direct character movement, exploration, satisfying sword and spell combat, interactive locations.
-- **Thirty seconds or thirty minutes:** Standalone arcade, card, and campus activities with real gameplay alongside quests and combat.
-- **MMO-style growth without MMO scope:** Persistent levels in modern-day skills and combat disciplines, gear upgrades, rare discoveries, unlockable locations, and eventual asynchronous rankings.
-- **Low art dependency:** Consistent overhead 2D art; compact tiles, reusable characters, code-generated effects, and visually readable silhouettes.
-- **Respect player time:** No punitive daily login requirements, real-time waiting gates, pay-to-win, or unavoidable travel to enjoy a short session.
+**30 minutes:** Explore Homewood and Nightwood, investigate a mystery, meet friends, choose optional romance routes, gather and craft supplies, and clear a Nightwood zone.
 
-## Development rule
+Your character gains independent RuneScape-style levels in modern skills — Athletics, Gaming, Card Sense, Electronics, Research, First Aid, Scavenging, and many later additions — plus Bladecraft and magical techniques. Progress is persistent. No punishing real-world daily deadlines.
 
-**Don't build an enormous RPG before a five-minute slice is fun.** The first build must prove movement, sword combat, one mini-game, a real school-life decision, rewards that persist, and a coherent story hook. See the handoff plan for sequencing.
+## Canonical documents
 
-## Canon hierarchy
+- [Full Game Design Document](docs/GAME_DESIGN_DOCUMENT.md) — full gameplay/loop, mini-games, skill systems, combat, art budget, UI and MVP boundaries.
+- [Story & World Bible](docs/STORY_AND_WORLD_BIBLE.md) — definitive names, Homewood/Nightwood geography, monsters, bosses, the sword, Custodians, story acts and relationships.
+- [Development & Technical Handoff](docs/DEVELOPMENT_HANDOFF.md) — suggested architecture, save contracts, system requirements, build milestones and tests.
+- [AGENTS.md](AGENTS.md) — implementation instructions for coding agents.
 
-When documents disagree: (1) the full GDD governs mechanics and scope; (2) the story bible governs narrative specifics; (3) the technical handoff governs suggested implementation. Items explicitly marked **TBD** are decisions still open; other settings are initial design targets, not assertions that the game exists already.
+**Canon priority:** GDD for mechanics, Story Bible for story/world/character canon, Technical Handoff for engineering. If older text still refers to pre-revision names, Story Bible v2 supersedes it. All student characters and supernatural incidents in Homewood are fictional.
 
-© Nightwood — original project concept. All character, place, and faction names are fictional.
+## Scope and production standard
+
+Browser-first, single-player initially, top-down action combat with code-driven effects and a minimal, consistent sprite/tile budget. Focus on enjoyable movement, sword combat, two mini-games, and a school-life decision before expanding. Online accounts and social leaderboards come later, after core gameplay is proven.
+
+No source assets from proprietary games, no real-world gambling, and no sexual content featuring student characters.

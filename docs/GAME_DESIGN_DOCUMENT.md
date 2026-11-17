@@ -13,7 +13,7 @@
 
 ## 1. Executive vision
 
-**Elevator pitch:** Nightwood follows Eli Ward, a 17-year-old student at Nightwood High in a fictional present-day American city. When a student vanishes during a strange school blackout, Eli discovers Bellwether, an ancient sword disguised among forgotten theater props. It lets him see and fight monsters slipping through a hidden layer of reality called the Veil. Eli must protect his friends and uncover why his school is the epicenter of a growing breach while still attending class, maintaining relationships, working, playing games around town, and trying to have a normal teenage life.
+**Elevator pitch:** Nightwood follows the player character, a 17-year-old student at Homewood High in a fictional present-day American city. When a student vanishes during a strange school blackout, the player discovers Night Splitter, an ancient sword disguised among forgotten theater props. It lets him see and fight monsters slipping through a hidden layer of reality called Nightwood. the player must protect his friends and uncover why his school is the epicenter of a growing breach while still attending class, maintaining relationships, working, playing games around town, and trying to have a normal teenage life.
 
 **Player fantasy:** You are not a knight in a medieval kingdom. You are a high school student who carries an impossible sword while worrying about a group project, a best friend's unanswered message, a part-time job, and whether anyone noticed the claw marks outside the gym.
 
@@ -27,14 +27,14 @@
 2. **Player-directed time.** A 30-second play session is complete and satisfying. A 30-minute session supports meaningful exploration, combat, and story progress.
 3. **Hands-on gameplay.** The hero moves in a navigable overhead world and fights with a sword; the game must not devolve into a static menu-driven idle RPG.
 4. **Modern skill mastery.** Independent skills reflect recognizable present-day activities: research, electronics, fitness, gaming, cards, media, first aid, and so on.
-5. **The sword is the identity.** Bellwether stays with Eli. It grows in techniques, appearance, and story significance instead of being replaced every few levels by disposable loot.
+5. **The sword is the identity.** Night Splitter stays with Eli. It grows in techniques, appearance, and story significance instead of being replaced every few levels by disposable loot.
 6. **Small but convincing world.** Concentrated locations, clever reuse, distinctive lighting, memorable NPCs, and visual feedback beat enormous maps filled with assets we can't afford.
 7. **A reason to return, not an obligation.** Progress saves constantly. There are no login streak penalties, real-time energy gates, forced daily activities, or expiring rewards required to advance.
 8. **Clarity before complexity.** The main goals, available actions, rewards, and risks must be understandable within seconds. Hidden mechanics must not decide basic outcomes.
 
 ### 1.2 Desired emotional experience
 
-A familiar school corridor feels different after the player discovers a monster standing at its far end. At the library, the same table can hold an ordinary card game in the afternoon and a research clue at night. A friend may be furious about being stood up for a school event because Eli was saving a stranger. Progression should make the player feel **more capable**, while story choices make the world feel **more personal**.
+A familiar school corridor feels different after the player discovers a monster standing at its far end. At the library, the same table can hold an ordinary card game in the afternoon and a research clue at night. A friend may be furious about being stood up for a school event because the player was saving a stranger. Progression should make the player feel **more capable**, while story choices make the world feel **more personal**.
 
 ### 1.3 What this is not
 
@@ -42,53 +42,36 @@ Not an MMO launch, not an endless survival crafting game, not a deck battler, no
 
 ---
 
-## 2. Setting and fiction
+## 2. Setting and fiction — canonical revised design
 
-### 2.1 Place and time
+**Homewood** is the comfortable, homey present-day city in Alabama. **Nightwood** is a disturbing **shadow realm** that overlaps the city, with warped doubles of ordinary locations. The barrier between them is called **the boundary**, *not* “the Veil.” The school, town map, students and incidents are fictionalized; no actual local student or incident is represented.
 
-**Nightwood** is a fictional, present-day mid-sized American city with suburban neighborhoods, an aging downtown, a public high school, community businesses, creek trails, and utility tunnels. Phones, social apps, school sports, traffic lights, public libraries, convenience stores, and old arcade cabinets are all normal parts of the world.
+**Protagonist:** A high school student around age 17. There is **no canonical character name**. At first launch, choose name, **boy or girl**, hair, skin tone and outfit colors. Dialogue must use the player name and appropriate pronouns. The character's gender never restricts core skills, magic, or romance options.
 
-**Nightwood High** is the narrative center. It has a front courtyard, academic wing, cafeteria, library/media center, gym, auditorium, athletics complex, maintenance corridor, and tunnels that should not appear on any student map.
+**The Night Splitter:** The permanent named magic sword found concealed beneath the school's auditorium stage. It can cut Nightwood creatures, channel sword techniques and magic, reveal hidden trails, sever anchors and create controlled crossings at marked seams. It folds into a harmless-looking keepsake when the character returns to school. It evolves visibly and is not replaced by random loot swords.
 
-The secret supernatural layer is called **the Veil**. Most people unconsciously rationalize its disturbances — a shadow becomes a faulty light, a scream becomes a bad speaker, a lost hour becomes an ordinary distraction. People who are sensitive to the Veil can see what's really happening. Occasionally a **breach** opens, allowing monsters called **Strays** into the ordinary world.
+**The Custodians:** An informal network monitoring Nightwood, maintaining failing seals and concealing the shadow realm's existence. Their disagreements and mistakes matter to the story. Ms. Lena Park, librarian and archivist, is an early contact.
 
-The Veil is not exclusively nocturnal. Night is more dangerous, but events can erupt at lunch, after practice, during a pep rally, or at the arcade.
+### Starting Nightwood monsters
 
-### 2.2 Protagonist
-
-**Eli Ward** is the default/canonical narrative name, 17, a junior at Nightwood High. He is ordinary enough to be believable: capable but not exceptional, worried about friendships and his future, with a parent who works long emergency-care shifts and a younger sibling he sometimes looks after. He isn't prophesied to be a hero. He reaches for the sword because someone needs help.
-
-**Customization policy:** The player may change Eli's display name, hairstyle, skin tone, shirt/jacket color, and casual outfit. Narrative dialogue uses player-name variables. Core backstory, age band, school enrollment, family stakes, and his male protagonist identity remain fixed for authored scenes. His attitude is shaped by dialogue choices rather than a heavy morality meter.
-
-### 2.3 Bellwether — the magical sword
-
-Bellwether is a long, visually distinct blade with a narrow metallic edge, a guard shaped like a tuning fork, and a luminous seam running its length. It was hidden behind a false panel beneath the high school auditorium stage, mislabeled as a theater prop.
-
-- **Disguise:** In ordinary public spaces, it can collapse into an old brass key on Eli's school lanyard. This avoids implausibly carrying an exposed sword to class.
-- **Awakening:** When a breach opens or Eli deliberately calls it, the key unfolds into the full blade; the animation is short and readable.
-- **Purpose:** Bellwether cuts the anchors holding Strays to reality and can seal smaller breaches. It is not a weapon designed to attack human NPCs.
-- **Growth:** The blade unlocks stances, sigils, defensive counters, and visible markings through story progress and sword mastery. It is always recognizable as *your* sword.
-- **Narrative tension:** The blade seems to remember fragments of previous wielders. Whether those memories are trustworthy is part of the mystery.
-- **Gameplay distinction:** Most ordinary equipment is supporting gear — jackets, shoes, wristbands, phone accessories, talismans, and crafted modifications. Players do not swap out Bellwether for a random better sword.
-
-### 2.4 Major characters and factions
-
-| Character / group | Place in story | Gameplay function |
+| Monster | Canon role | Combat implementation |
 |---|---|---|
-| **Eli Ward** | Student protagonist | Customizable main character and player viewpoint |
-| **Mara Ortiz** | School newspaper editor, skeptical and sharp | Research, media, investigations, trust decisions |
-| **Theo Brooks** | Eli's closest friend and arcade regular | Mini-games, humor, social stakes, tech help |
-| **Ms. Lena Park** | Nightwood Public Library archivist | Lore mentor, card-table host, archive unlocks |
-| **Nina Ward** | Eli's mother, works long emergency-care shifts | Home life, responsibility, grounded emotional stakes |
-| **Dr. Cora Hayes** | Nightwood High principal | School obligations, institutional suspicion |
-| **Calder Reese** | Contractor leading a city infrastructure modernization program | Ambiguous antagonist and key to the breaches |
-| **The Custodians** | Local informal network that quietly maintains weak spots in the Veil | Hidden quests, upgrades, moral disagreements |
-| **The Chorus** | Human group that wants to permanently open the Veil | Primary antagonistic faction |
-| **Strays** | Creatures passing through breaches | Combat enemies with varied behaviors |
+| **Strays** | Weakest, most numerous | Swarming small melee attackers |
+| **Shadewalkers** | Most dangerous to Homewood because **their shadows cast into Homewood** while their bodies stay in Nightwood | Offset shadow projections, repositioning/stealth and home-realm hazard |
+| **Howlers** | Loud and deceptive; fool players with noises | Fake audio directions with true accessible visual telegraph |
+| **Feeders** | Feed on fear | Counterable visible Dread status, Focus drain |
+| **Nighthounds** | Pets of Feeders | Fast packs and master-linked behaviors |
+| **Crawlers** | Can climb walls and ceilings | Ceiling traversal and clearly marked drop attacks |
 
-Narrative specifics, secrets, and plot turns live in the companion **Story & World Bible**.
+**Early-saga bosses (planned):** **Mistress Shade** at the school's Nightwood counterpart; **The Warden**; **The Unseen King**; **Nyxara**; **The Maw**; **Astrix**; and **The Crown Council**, a **three-boss encounter**. The first prototype only needs a Mistress Shade teaser and an initial monster encounter; do not present all seven as implemented content.
 
----
+### Friends and optional romance
+
+Four peer love interests: **Mara Ortiz (girl), Jessa Navarro (girl), Theo Brooks (boy), Adrian Bell (boy)**. Boy or girl player characters can pursue any option. Relationships are opt-in, teen-appropriate authored stories about attraction, trust, school life and secrecy; romance is not required and has no sexual content. NPCs remain friends if romance is declined.
+
+**Story spine:** Normal school day in Homewood → shadow anomaly and missing student → Night Splitter discovery → first crossing into Nightwood → Stray swarm/Crawler ambush/Shadewalker projection → Mistress Shade at the mirrored school → return to friends with a choice about secrecy. Longer arc moves through the Warden, Unseen King, Nyxara, Maw, Astrix and Crown Council.
+
+Detailed world rules, monster ecology, bosses, cast and four-act plot are canonical in the **Story & World Bible v2**.
 
 ## 3. Core player loop and session design
 
@@ -110,14 +93,14 @@ The player is not forced to fight to progress. Combat drives the central story, 
 
 ### 3.3 Getting to a short activity
 
-Initially, the player physically discovers the arcade or library by walking there. Once visited, the location becomes accessible from the in-game **Phone → Places → Quick Visit** menu when the player is not in combat or mid-quest. A short transit fade places Eli just inside the venue. This is a convenience shortcut, not literal teleportation in the fiction. It preserves the navigable world without spending most of a 30-second session walking.
+Initially, the player physically discovers the arcade or library by walking there. Once visited, the location becomes accessible from the in-game **Phone → Places → Quick Visit** menu when the player is not in combat or mid-quest. A short transit fade places the player just inside the venue. This is a convenience shortcut, not literal teleportation in the fiction. It preserves the navigable world without spending most of a 30-second session walking.
 
 Players can resume at the last safe position or open **Quick Play** on the title screen to enter a previously discovered activity. The mini-game returns them to its venue and then their last safe place if they choose.
 
 ### 3.4 Player motivation at three horizons
 
 - **This session:** Beat a score, find one clue, upgrade a technique, help an NPC, beat one monster.
-- **This week:** Unlock a new district, raise a skill to a milestone, complete a school storyline, advance the Bellwether tree.
+- **This week:** Unlock a new district, raise a skill to a milestone, complete a school storyline, advance the Night Splitter tree.
 - **Long term:** Finish chapters, master professions, collect cosmetic artifacts, discover rare variants, grow relationships, beat personal records, complete challenge runs, and compare optional asynchronous rankings.
 
 ### 3.5 No passive punishment
@@ -145,7 +128,7 @@ Real-world time passing does not cause the player to miss school, lose friendshi
 
 ### 5.1 Combat fantasy and target complexity
 
-Eli fights Strays with Bellwether and a handful of magic techniques. Combat is direct and readable, not a spreadsheet or full Diablo clone. A normal overworld fight should last approximately **10–35 seconds** at equal gear; a meaningful boss may take **2–4 minutes** once the player understands patterns.
+the player fights Strays with Night Splitter and a handful of magic techniques. Combat is direct and readable, not a spreadsheet or full Diablo clone. A normal overworld fight should last approximately **10–35 seconds** at equal gear; a meaningful boss may take **2–4 minutes** once the player understands patterns.
 
 ### 5.2 Launch combat verbs
 
@@ -177,25 +160,27 @@ Additional advanced abilities come later: tether/bind, area sweep, counter, veil
 - Dodge takes precedence over buffered regular attacks when allowed; avoid input-eating.
 - A monster in reach can be target-selected with click/tap; sword hitbox remains positional.
 - Monsters cannot silently spawn on top of the player.
-- Defeat returns Eli to a safe place, retains character XP and permanent items, and costs only minor consumables or a small temporary injury. No full inventory drop or permadeath.
+- Defeat returns the player to a safe place, retains character XP and permanent items, and costs only minor consumables or a small temporary injury. No full inventory drop or permadeath.
 - Human NPCs cannot be attacked. Fantasy violence is stylized, with no gore.
 
-### 5.5 Enemy roster and roles
+### 5.5 Nightwood monster and boss roster
 
-| Enemy | Combat behavior | Production-friendly visuals |
-|---|---|---|
-| **Strayling** | Fragile skittering melee enemy; teaches attack timing | Dark small silhouette with two glowing eyes |
-| **Watcher** | Hovering scout that fires a slow projectile | Single-eye geometric sprite with particles |
-| **Hollow** | Slow heavy enemy, clearly telegraphed slam | Oversized angular shadow body |
-| **Flicker** | Briefly disappears and reappears near player | Shared base sprite with distortion effect |
-| **Latch** | Clings to fixtures and creates small hazards | Wall-mounted dark node with tendrils |
-| **The Bellless** | First named miniboss, tied to school auditorium | Unique silhouette assembled from reused materials |
+Combat opponents are **Strays, Shadewalkers, Howlers, Feeders, Nighthounds, and Crawlers**, with distinct gameplay functions and minimal-art silhouettes.
 
-Three enemy types are enough for MVP: Strayling, Watcher, Hollow. More types only after combat is fun.
+- **Strays:** Most numerous and individually weakest. Simple dark shapes with glowing eyes; attack in groups.
+- **Shadewalkers:** Tall roaming shadows; a separate cast-shadow entity can create detectable hazards in Homewood even if their body remains in Nightwood. This is central to the story and mechanics.
+- **Howlers:** Manipulate sound to draw players the wrong way; use visible honest combat telegraphs for accessibility.
+- **Feeders:** Build a visible, counterable Dread effect by feeding on fear; defensive magic can mitigate it.
+- **Nighthounds:** Fast quadruped enemies serving/protecting nearby Feeders.
+- **Crawlers:** Many-limbed enemies that travel along walls and ceilings before a warned drop.
+
+**First combat slice:** Strays, a Crawler ambush and a simple Shadewalker shadow projection, all in a small Nightwood reflection of Homewood High. Add other full behaviors once movement and sword combat feel good.
+
+**Bosses:** Mistress Shade (school); The Warden (Lockworks); The Unseen King (Shadewalker ruler); Nyxara (reflection); The Maw (deep shadow-water); Astrix (signal tower); The Crown Council (three independent bosses simultaneously). These are planned early-saga content, not all MVP requirements.
 
 ### 5.6 Sword progression
 
-The player doesn't farm hundreds of nearly identical blades. Bellwether has:
+The player doesn't farm hundreds of nearly identical blades. Night Splitter has:
 - **Technique slots** for the active moveset (initially two techniques; expand later).
 - **Sigil slots** for crafted combat modifiers.
 - **Visual stages** for story milestones (new glowing line/guard detailing).
@@ -205,7 +190,7 @@ Players may respec these branches at a safe location for a modest in-game cost, 
 
 ### 5.7 Gear and loot
 
-Equip two everyday clothing pieces, one accessory, one tool, and one Bellwether sigil in the MVP; expansion may add more. Item examples: running shoes (dodge recovery), insulated jacket (resistance), repaired fitness tracker (mobility), notebook charm (research), compact first-aid pouch (healing), grounded-wire sigil (Pulse modifier).
+Equip two everyday clothing pieces, one accessory, one tool, and one Night Splitter sigil in the MVP; expansion may add more. Item examples: running shoes (dodge recovery), insulated jacket (resistance), repaired fitness tracker (mobility), notebook charm (research), compact first-aid pouch (healing), grounded-wire sigil (Pulse modifier).
 
 Item quality tiers should be clear (Common, Unusual, Rare, Singular) with low random-stat variance. Rare drops should change tactical options or appearance, not only inflate a number.
 
@@ -270,7 +255,7 @@ A player focused on card games, Research, and Electronics could spend much of th
 
 Story progression uses **three broad states** instead of a real-time attendance simulator:
 
-1. **School Hours:** Classes, hallway dialogue, lunch, gym, media center, rumors, short tasks, and occasional daytime Veil incidents.
+1. **School Hours:** Classes, hallway dialogue, lunch, gym, media center, rumors, short tasks, and occasional daytime Nightwood incidents.
 2. **After School:** Arcade, library, club activities, part-time jobs, neighborhood exploration, preparation.
 3. **Night / Dangerous Window:** Breaches are more active, tougher zones become available, major story scenes happen.
 
@@ -280,7 +265,7 @@ The player advances major time states intentionally through quests, resting, or 
 
 Nightwood should create pressure through **decisions and consequences**, not tedious chores.
 
-- **Trust (per relationship):** Friends respond to help, honesty, keeping promises, and how frequently Eli disappears without explaining himself.
+- **Trust (per relationship):** Friends respond to help, honesty, keeping promises, and how frequently the player disappears without explaining himself.
 - **Exposure (0–100):** How suspicious the school/community is of weird occurrences involving Eli. High Exposure adds rumors, extra surveillance, or alternative routes but does not permanently fail the game.
 - **School Standing (0–100):** A lightweight proxy for responsibilities, not individual math/biology grades. Earned through limited authored school tasks; affects teacher dialogue and access.
 - **Wellbeing:** A story-oriented condition with clear recovery options, not a constant hunger/sleep/mood timer.
@@ -311,7 +296,7 @@ The campus changes as the story advances: a hallway's fluorescent lights begin f
 
 ### 8.1 Quarterlight Arcade — Ghost Circuit (MVP)
 
-**Fantasy:** Eli walks into a small retro-futurist arcade where his friend Theo hangs out. He steps up to the Ghost Circuit cabinet.
+**Fantasy:** the player walks into a small retro-futurist arcade where his friend Theo hangs out. He steps up to the Ghost Circuit cabinet.
 
 **Type:** Short three-lane reflex runner; one button/gesture for left and right, usable with mouse, keyboard, or touch.
 
@@ -328,7 +313,7 @@ The campus changes as the story advances: a hallway's fluorescent lights begin f
 
 **Asset cost:** Three lanes, abstract obstacles, runner icon, particles, text — almost entirely code-rendered.
 
-### 8.2 Nightwood Public Library — Stacks 21 (MVP)
+### 8.2 Homewood Public Library — Stacks 21 (MVP)
 
 **Fantasy:** At a table near the library windows, a small student group has a simple number-card challenge. The game has nothing to do with the main magical sword.
 
@@ -375,94 +360,45 @@ A short session is a design success if a returning player can **launch the game,
 
 ---
 
-## 9. World layout and locations
+## 9. World layout — Homewood / Nightwood
 
-### 9.1 World principles
+Build **one compact modern Homewood world**, then its **distorted Nightwood reflection** by reusing tile geometry and selectively altering lighting, props, collision gates and inhabitants. The city and the realm must always be visibly distinguished.
 
-Nightwood is a compact navigable city, presented as connected scenes and districts rather than a gigantic seamless open world. Every important location should serve **at least two purposes**: story plus gameplay, or socializing plus mini-games, or traversal plus resources.
+    HOMEWOOD HIGH -- ATHLETICS COMPLEX -- CREEK TRAIL
+         |                 |                  |
+     AUDITORIUM        NEIGHBORHOOD       LOCKWORKS
+         |                 |
+      QUARTERLIGHT ARCADE -- DOWNTOWN -- PUBLIC LIBRARY
 
-### 9.2 Proposed map
-
-```text
-             [CREEK TRAIL / OLD PUMP HOUSE]
-                         |
- [RESIDENTIAL BLOCK] -- [NIGHTWOOD HIGH] -- [ATHLETICS COMPLEX]
-         |                |         |
-         |           [AUDITORIUM]  [GYM]
-         |                |
- [QUARTERLIGHT ARCADE] -- [DOWNTOWN / BUS STOP] -- [PUBLIC LIBRARY]
-                             |
-                        [SERVICE TUNNELS]
-```
-
-This is a connectivity concept; a production map should show gates, camera constraints, and interaction points.
-
-### 9.3 Locations and functions
-
-| Place | Mundane identity | Gameplay / Veil identity |
+| Homewood location | Ordinary activity | Nightwood reflection |
 |---|---|---|
-| Nightwood High courtyard | Friends, student errands, conversations | Tutorial hub and early rumors |
-| School academic wing | Classes and school duties | First clues, locked storage, daytime events |
-| Auditorium / basement | Theater props, after-school cleanup | Bellwether discovery, first boss, breach doorway |
-| Athletics complex | Field, bleachers, gym, student sport | Fitness games, outdoor encounters, service access |
-| Quarterlight Arcade | Cabinets, leaderboard, Theo's hangout | Ghost Circuit and eventual secrets in cabinet circuitry |
-| Nightwood Public Library | Archive, study tables, librarian | Stacks 21, Research, old city records |
-| Residential block | Home, neighbors, small errands | Emotional grounding and evening threats |
-| Downtown strip | Shops, bus stop, part-time work | Fast travel hub, gear, electronics tasks |
-| Creek trail | Walking path, woods, old pump building | Scavenging, early field enemies, nature route |
-| Service tunnels | Old city infrastructure | Dungeons, mystery, plot escalations |
+| Homewood High | Classes, friends, training | Repeating locker corridors, Strays, projected shadows |
+| Auditorium | Rehearsal/stage | Blackstage, Night Splitter discovery, Mistress Shade |
+| Athletics complex | Fitness mini-games, school life | Hollow Stands, Howlers |
+| Quarterlight Arcade | Ghost Circuit, Gaming and Theo | Dead Quarter with anomalous cabinets |
+| Public Library | Stacks 21, Research, Ms. Park and Adrian | Unwritten Stacks and Nyxara's clues |
+| Neighborhood streets | Errands and relationships | Endless dark Long Block and Shadewalker hazards |
+| Creek and old works | Exploration, scavenging | Blackwater Cut, Crawlers, Nighthounds, the Warden |
 
-### 9.4 First playable map scope
+**First slice:** Campus, auditorium, one Nightwood school combat scene, arcade and library. Other districts can be locked/foreshadowed.
 
-**Vertical slice requires only:** one compact Nightwood High campus zone (with a hallway and sealed auditorium transition), one outdoor combat segment, Quarterlight Arcade interior, and library interior. The other districts can be displayed on the map as locked/future locations without misleading “click to enter” promises.
+**Short session rule:** Once a venue is visited, Phone → Places → Quick Visit (or menu Quick Play) lets the player immediately play a genuine mini-game without walking across the whole map.
 
-### 9.5 Exploration incentives
+## 10. Story structure, quests, and choices
 
-A player should regularly find something through movement: a note, a rumor, a hidden route, an upgrade part, a phone recording, a new NPC, a small lore item. Exploration should not consist of long walks through empty streets. New traversal routes unlock through story and occasionally modern skills.
+**Act I — The Other Side of Home:** The player chooses a name and boy/girl identity, meets Homewood classmates, discovers the Night Splitter at the school, first fights Strays and specialized shadow monsters, confronts the threat of Mistress Shade, and learns of the Custodians.
 
----
+**Act II — Streets That Remember:** Investigate mirrored neighborhoods, Howlers, Feeders/Nighthounds, and the Warden; understand how the Unseen King's Shadewalkers reach Homewood.
 
-## 10. Missions, narrative pacing, and choices
+**Act III — The City With Two Faces:** Nyxara reveals lost sword history; The Maw threatens the boundary; friendships and optional romance complicate keeping the secret.
 
-### 10.1 Quest types
+**Act IV — The Longest Night:** Astrix twists communications; three members of the Crown Council fight as a combined boss encounter; player protects Homewood and decides how much truth to share.
 
-- **Main story:** Fully authored chapters surrounding the sword, school, the Veil, and missing people. Crucial scenes have bespoke dialogue.
-- **Student life:** Friendships, clubs, school-paper stories, family, small commitments.
-- **Town jobs:** Repair devices, deliver something, research information, help a shop or community member.
-- **Investigations:** Gather clues, compare evidence, choose search route.
-- **Breaches:** Fight small enemy groups and seal a localized supernatural incursion.
-- **Activity challenges:** Beat a score, finish a library match, complete a gym trial.
+**Quest categories:** Main story, ordinary school-life events, peer/family relationships and optional dates, modern-day tasks/jobs, investigative research, realm expeditions and repeatable arcade/library score challenges. Main quest gates must offer alternatives to avoid forcing unrelated skill grinding.
 
-### 10.2 The first hour
+**Player choices:** Friendship/Trust, School Standing and Exposure are visible. Optional romance with the two male or two female peers works with either gender player and is never mandatory. Real-world clock or logout time cannot damage school standing or relationships.
 
-1. **Ordinary morning:** Player creates Eli, enters Nightwood High, gets to know Mara and Theo, moves and interacts.
-2. **Small choice:** Help a teacher with an electronics problem or follow a rumor; both train real skills.
-3. **After-school freedom:** Introduce arcade and library as two immediate playable options, no long tutorial walls.
-4. **The disruption:** Power outage; a student disappears near the auditorium; an impossible second school bell rings.
-5. **Bellwether:** Eli finds the concealed sword while trying to help; an enemy enters and the first combat tutorial begins.
-6. **The secret:** A trusted adult appears to know more than they admit; one friend notices Eli's disappearance.
-7. **Choice and save:** Player may return to school/town activities or follow the first breach investigation. Show saved progression and a clear next objective.
-
-The game should not demand that the first hour be linear. It guides the plot while allowing side activities early.
-
-### 10.3 First chapter objective
-
-**Chapter 1: After the Second Bell** — Find out why a second bell sounds at night and who disappeared. This chapter introduces the town, Bellwether, basic combat, two friends, Research, and at least one optional student activity. Concludes with a small confrontation near the school service corridor and a decision about what to tell Mara.
-
-### 10.4 Choices without exploding narrative budget
-
-Choices adjust Trust, Exposure, small dialogue branches, and optional clue routes. Most branches converge at major set pieces while preserving acknowledgments of what the player did. No binary “good/evil” gauge, no invisible permanent ending penalty for spending time at the arcade.
-
-### 10.5 Main-story arc
-
-- **Act I — After the Second Bell:** Discovery, first monster, sword, disappearance.
-- **Act II — The Town That Doesn't Notice:** City disturbances spread; ordinary venues hide connections.
-- **Act III — The Price of Normal:** Trust is strained; exposure and secrecy collide; discover who benefits from the breaches.
-- **Act IV — The Last Period:** A major school event becomes the backdrop for a city-level incursion; protect classmates, confront the human catalyst, and decide how much truth Nightwood can bear.
-
-Detailed twist and ending outline: companion Story & World Bible.
-
----
+**Opening target:** Create character → explore cozy Homewood High → train one modern skill → visit arcade or library → impossible school shadow → discover Night Splitter → enter Nightwood and fight → see a Shadewalker cast into Homewood → Mistress Shade teaser → return to ordinary life and face one relationship decision. Detailed scene/dialogue beats live in Story & World Bible.
 
 ## 11. Progression, inventory, economy, and collection
 
@@ -472,7 +408,7 @@ The player's primary persistent identity consists of:
 - Character profile and appearance.
 - Character level and XP.
 - All skill levels, XP, milestones, and unlocked activities.
-- Bellwether techniques, sigils, mastery choices, and appearance stage.
+- Night Splitter techniques, sigils, mastery choices, and appearance stage.
 - Equipment, inventory, crafting materials, currency, and collectibles.
 - Completed and active quests, meaningful choices, unlocked locations.
 - Relationships and school standing/exposure.
@@ -481,24 +417,24 @@ The player's primary persistent identity consists of:
 
 ### 11.2 Growth should be visible
 
-Level-ups give feedback beyond “+1”: an animation or sound, one clear improvement, newly available interactions, and a character-sheet entry. Bellwether appearance changes at story milestones. Modern clothes and accessories visibly alter the simple character sprite where feasible, with palette variants before expensive per-item art.
+Level-ups give feedback beyond “+1”: an animation or sound, one clear improvement, newly available interactions, and a character-sheet entry. Night Splitter appearance changes at story milestones. Modern clothes and accessories visibly alter the simple character sprite where feasible, with palette variants before expensive per-item art.
 
 ### 11.3 Resources
 
 - **Cash:** Fictional ordinary town money used for snacks, basic gear, small transport services, and clothing. Earned through quests, jobs, some activities.
 - **Parts:** Electronics/Scavenging components for devices and support tools.
-- **Veil Shards:** Supernatural crafting material from Strays and breaches; used for sigils and high-tier sword upgrades.
+- **Night Shards:** Supernatural crafting material from Strays and breaches; used for sigils and high-tier sword upgrades.
 - **Arcade Tickets:** Earned from arcade skill performances; used for cosmetic cabinets/themes, posters, and optional avatar accessories. No paid conversion.
 
 Avoid many overlapping currencies. There is **no real-money wagering or cash-out system**.
 
 ### 11.4 Loot and crafting
 
-Enemies occasionally drop Veil Shards and unusual accessories, while everyday exploration yields Parts and consumables. Research can reveal recipes; Electronics can make detectors and upgraded equipment; First Aid prepares recovery kits. MVP crafting should contain **5–8 meaningful recipes**, not hundreds.
+Enemies occasionally drop Night Shards and unusual accessories, while everyday exploration yields Parts and consumables. Research can reveal recipes; Electronics can make detectors and upgraded equipment; First Aid prepares recovery kits. MVP crafting should contain **5–8 meaningful recipes**, not hundreds.
 
 ### 11.5 Money and power balance
 
-Story combat upgrades should not be purchasable instantly from spamming one mini-game. Arcade rewards are primarily skill XP, scores, collectibles, and small spending money. The strongest Bellwether upgrades require a story discovery or boss ingredient; secondary build choices can be earned through other activities.
+Story combat upgrades should not be purchasable instantly from spamming one mini-game. Arcade rewards are primarily skill XP, scores, collectibles, and small spending money. The strongest Night Splitter upgrades require a story discovery or boss ingredient; secondary build choices can be earned through other activities.
 
 ### 11.6 Death and recovery
 
@@ -539,7 +475,7 @@ Do not hide a character upgrade underneath an already long page; do not require 
 
 ### 13.1 Visual identity
 
-**Modern suburban mystery, warm everyday life versus cold impossible light.** By day: slightly muted asphalt, brick, school blue-gray, soft gold afternoon light. During Veil events: deep violet, cyan/teal highlights, strong dark silhouettes, glitch-like refraction. The contrast creates atmosphere without photorealistic asset demands.
+**Modern suburban mystery, warm everyday life versus cold impossible light.** By day: slightly muted asphalt, brick, school blue-gray, soft gold afternoon light. During Nightwood events: deep violet, cyan/teal highlights, strong dark silhouettes, glitch-like refraction. The contrast creates atmosphere without photorealistic asset demands.
 
 **Recommended:** Stylized 2D top-down art with compact reusable tiles and simple directional sprites. Do not use isometric art unless the entire rendering system is explicitly designed for it. Avoid mixing incompatible asset pack camera angles.
 
@@ -552,7 +488,7 @@ Do not hide a character upgrade underneath an already long page; do not require 
 | Monsters | 3 base silhouettes + 1 boss silhouette | Sprite transforms and particles, no advanced rigs |
 | Tiles | School, asphalt, grass, interior floor, walls, water/creek | Modular tile set, roughly 40–70 reusable tiles |
 | Props | Lockers, doors, desks, benches, trees, signs, cabinet, library table | Roughly 25–35 reusable objects |
-| Sword/effects | Bellwether, arc slash, pulse, ward, breach | SVG/shader/particle effects with code-generated motion |
+| Sword/effects | Night Splitter, arc slash, pulse, ward, breach | SVG/shader/particle effects with code-generated motion |
 | UI | Icons, bars, phone tabs, cards, cabinet runner | Vector/CSS/canvas components |
 | Sound | Short original/correctly licensed loops and impacts | Small cue library, layered reuse |
 
@@ -568,8 +504,8 @@ A coherent low-detail style is better than a beautiful lone player sprite on a b
 
 Sound distinguishes normal and supernatural layers:
 - Ordinary school ambience: footsteps, lockers, HVAC hum, distant gym sounds, murmuring.
-- Veil intrusion: muted surrounding audio, pitched fluorescent buzz, unnatural second bell, layered reverse breath/noise.
-- Bellwether: clean ring/metallic resonance on summon and decisive sword hit.
+- Nightwood intrusion: muted surrounding audio, pitched fluorescent buzz, unnatural second bell, layered reverse breath/noise.
+- Night Splitter: clean ring/metallic resonance on summon and decisive sword hit.
 - Arcade: crisp original short chiptune; library card game: subtle table/card sounds with music optional.
 - Music: short looping ambient cues rather than a massive soundtrack at MVP.
 
@@ -580,7 +516,7 @@ Every important sound cue should have a visual equivalent. All audio must be ori
 ## 15. Difficulty and pacing
 
 - Combat has **Story / Standard** options at launch if inexpensive to implement; default Standard. Both yield equal progression rewards.
-- First enemy teaches movement and strikes, first Watcher teaches avoiding telegraphed attacks, first Hollow teaches patience and dodge.
+- First enemy teaches movement and strikes, first Shadewalker teaches avoiding telegraphed attacks, first Crawler teaches patience and dodge.
 - No instant character death due to hidden hitboxes.
 - Mini-games have a clear baseline mode; harder variants are opt-in and score-driven.
 - Clue and skill puzzles offer optional hints after repeated failures and never permanently lock the main plot.
@@ -619,14 +555,14 @@ The city, characters, and school are wholly fictional and should not borrow trad
 
 **One cohesive 20–40 minute experience, with quick-repeat side activities:**
 - Responsive top-down player movement and collision in school/outdoor zones.
-- Bellwether equipped/summoned with satisfying sword swings.
-- Three enemy behaviors, one short breach encounter, one miniboss if feasible after core feel passes.
+- Night Splitter equipped/summoned with satisfying sword swings.
+- Stray swarms, one Crawler ambush and Shadewalker shadow-projection clue; Mistress Shade teaser before the full boss fight in later chapter.
 - Basic health, Focus, dodge, damage, and defeat/retry.
 - At least **five visibly functional modern skills** from the MVP list; architecture supports the remainder.
 - A character sheet, inventory, **three meaningful item upgrades**, and saved XP.
 - **Ghost Circuit arcade** and **Stacks 21 library** playable from real world locations.
 - School Standing or Exposure choice affecting one later dialogue/reaction.
-- A short coherent narrative arc: daily school life → anomaly → Bellwether → combat → first clue.
+- A short narrative arc: player-selected name and boy/girl identity → ordinary Homewood school life → discover the Night Splitter → cross into Nightwood → combat → first clue and school-life consequence.
 - Save/resume, keyboard/mouse controls, touch-friendly mini-game access, one-click Quick Play after discovery.
 - Basic audio, clear interaction prompts, a usable Phone menu.
 - Browser deploy with no backend requirement for first test.
@@ -642,11 +578,12 @@ Live MMO, online trading, user chat, procedural city generation, dozens of profe
 ### 18.4 Acceptance criteria — gameplay
 
 A new player, with no external explanation, can:
-1. Move Eli around a recognizable school space using keyboard or touch.
+0. Create a boy or girl character with a chosen name that appears in dialogue; never see an imposed protagonist name.
+1. Move the player around a recognizable school space using keyboard or touch.
 2. Identify a person/object to interact with and complete it.
 3. Discover the arcade and finish a timed run with a comprehensible score.
 4. Discover the library and complete an intelligible card game.
-5. Find Bellwether during an authored story scene and defeat a telegraphed enemy.
+5. Find Night Splitter during an authored story scene and defeat a telegraphed enemy.
 6. Open Skills and see XP gained from at least two distinct activities.
 7. Equip or upgrade something and see the effect immediately.
 8. Make one school-life decision and later observe the consequence.
@@ -687,6 +624,15 @@ These should be playtested rather than guessed at up front:
 
 The next implementer should begin by reading this document, then **Story & World Bible**, then **Development & Technical Handoff**. Create tasks from the vertical-slice requirements in Section 18. Implement one scene end-to-end before broadening the city.
 
-If the initial build cannot make movement + Bellwether combat + one arcade run + one school choice fun, **do not add systems to hide the issue**. Fix that experience first.
+If the initial build cannot make movement + Night Splitter combat + one arcade run + one school choice fun, **do not add systems to hide the issue**. Fix that experience first.
 
 **Document intent:** This document defines the concept for handoff and production planning. It does not claim a playable game or that production assets, servers, or a finished codebase already exist.
+
+## 21. Updated naming and implementation invariants
+
+- **Homewood** is the cozy city; **Nightwood** is its dark parallel realm (and the game title). Do not treat Nightwood as the city or refer to the realm as an obsolete barrier name.
+- **The Night Splitter** is the only story-canon sword. The protagonist has no fixed name or gender. Allow boy/girl and name at first play.
+- **Modern RuneScape-style progression** and genuinely replayable mini-games remain as important as the sword-and-magic action RPG.
+- Monster behavior and boss list follow Section 2 and the Story & World Bible v2; retired generic enemy archetypes are not canon.
+- School-age romance is optional, age-appropriate, nonsexual and inclusive across the two gender choices; none of it gates the main story.
+- The setting fictionalizes Homewood and its students/campus; do not portray real students, real administrators, or real incidents.

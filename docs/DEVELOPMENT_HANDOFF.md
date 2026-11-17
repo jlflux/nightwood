@@ -11,7 +11,7 @@ This file is meant for a developer or AI coding agent taking over the project. I
 
 ## 1. Primary objective
 
-Build a **polished, playable vertical slice** before adding the rest of the world. The player must be able to walk through a recognizable modern school, find Bellwether, fight Strays, visit an arcade, play a real card mini-game at the library, gain skills, see a normal-school consequence, and come back later with all progress intact.
+Build a **polished, playable vertical slice** before adding the rest of the world. The player must be able to walk through a recognizable modern school, find Night Splitter, fight Strays, visit an arcade, play a real card mini-game at the library, gain skills, see a normal-school consequence, and come back later with all progress intact.
 
 **Never fake interactive systems with button-only XP rewards.** If the player chooses Ghost Circuit, they should actually dodge obstacles and score points. If the player chooses Stacks 21, they should actually choose where to place cards and win or lose according to clear rules.
 
@@ -141,7 +141,8 @@ interface LevelProgress {
 }
 
 interface CharacterSave {
-  displayName: string;
+  displayName: string; // chosen by player; never fixed by story
+  gender: "boy" | "girl";
   appearance: { hair: string; skin: string; top: string; accessory?: string };
   characterLevel: LevelProgress;
   skills: Record<SkillId, LevelProgress>;
@@ -154,6 +155,7 @@ interface CharacterSave {
   sword: {
     unlocked: boolean;
     stage: number;
+    swordId: "nightSplitter";
     techniques: string[];
     activeTechniques: string[];
     sigils: string[];
@@ -168,6 +170,8 @@ interface QuestSave {
 
 interface RelationshipSave {
   trust: Record<string, number>;
+  romanceInterest: Record<string, number>;
+  activePartnerId: string | null;
   exposure: number;       // 0..100
   schoolStanding: number; // 0..100
 }
@@ -180,6 +184,7 @@ interface ActivitySave {
 }
 
 interface WorldSave {
+  realm: "homewood" | "nightwood"; // realm persisted at save
   areaId: string;
   safePosition: { x: number; y: number };
   phase: WorldPhase;
@@ -252,19 +257,19 @@ Use snake-case or kebab-case stable IDs (pick one convention and use it consiste
 
 | Category | Stable ID example |
 |---|---|
-| Area | nightwood_high_courtyard |
-| Area | nightwood_high_auditorium |
+| Area | homewood_high_courtyard |
+| Area | homewood_high_auditorium |
 | Area | quarterlight_arcade |
-| Area | nightwood_public_library |
-| Enemy | strayling |
-| Enemy | watcher |
-| Enemy | hollow |
+| Area | homewood_public_library |
+| Enemy | stray |
+| Enemy | shadewalker |
+| Enemy | crawler |
 | Quest | ch01_after_second_bell |
 | Activity | ghostCircuit |
 | Activity | stacks21 |
 | Item | basic_first_aid_kit |
 | Item | electronics_parts |
-| Item | veil_shard |
+| Item | night_shard |
 | Sword technique | pulse |
 | NPC | mara_ortiz |
 | NPC | theo_brooks |
@@ -276,7 +281,7 @@ Do not identify characters with visible display names in save data; names may ch
 
 Every dialogue node should have: stable ID, speaking character, localized text key or inline draft, optional response choices, visible conditions, side effects, and next node ID. **Conditions and consequences must be explicit in data** rather than hidden UI logic.
 
-For example, when Eli tells Theo a partial truth, the next node increments his trust and sets a story flag. That side effect is recorded once.
+For example, when the player tells Theo a partial truth, the next node increments his trust and sets a story flag. That side effect is recorded once.
 
 ### 5.3 Quest contract
 
@@ -299,11 +304,11 @@ A quest may direct players to a mini-game, but should listen to ACTIVITY_COMPLET
 
 | Scene | Required interactables | NPC/content |
 |---|---|---|
-| School Courtyard + Hallway | Door, message board, locker, media terminal | Eli start, Mara, Theo, school task |
-| Auditorium / Basement | Prop cabinet, key, breach, locked passage | Bellwether scene, first Strayling |
+| School Courtyard + Hallway | Door, message board, locker, media terminal | the player start, Mara, Theo, school task |
+| Auditorium / Basement | Prop cabinet, key, breach, locked passage | Night Splitter scene, first Stray |
 | School Exterior / Athletics Edge | Exit gate, training patch, clue, enemies | Combat loop, school event setup |
 | Quarterlight Arcade | Ghost Circuit cabinet, owner stand, exit | Theo and first mini-game |
-| Nightwood Public Library | Card table, archive shelf, terminal, exit | Ms. Park, Stacks 21, research |
+| Homewood Public Library | Card table, archive shelf, terminal, exit | Ms. Park, Stacks 21, research |
 
 Each scene should have clearly displayed boundaries, collision volumes, interaction ranges, spawn points, audio/lighting states, and hooks for quest flags. Start with static map instances; avoid procedural map generation in the first release.
 
@@ -440,7 +445,7 @@ Initial level-up requirement (tune after playtests): **round(20 + 15L + 5L²)** 
 | Skill | Level 5 benefit | Level 10 benefit |
 |---|---|---|
 | Athletics | Slightly faster dodge recovery | Extra sprint route near athletics complex |
-| Research | Extra details on Strayling clues | Optional route to find old network schematics |
+| Research | Extra details on Stray clues | Optional route to find old network schematics |
 | Electronics | Basic scanner recipe | Better detection radius for breach devices |
 | First Aid | Stronger recovery kit | Prepare efficient two-use kit |
 | Scavenging | Reveal nearby ordinary caches | Higher chance of uncommon part |
@@ -522,7 +527,7 @@ Current stable Chrome, Safari, Edge, and Firefox on desktop; Chrome Android and 
 
 **Journey B — library specialist:** Continue same save → open Places → Quick Visit library → play Stacks 21 → hit exact 21 on a test seed → see accurate score → Research interaction → return to campus.
 
-**Journey C — swordfighter:** Take story objective → reach auditorium → unlock Bellwether → fight enemy and dodge → loot → open skill panel → level up Bladecraft → save and reload.
+**Journey C — swordfighter:** Take story objective → reach auditorium → unlock Night Splitter → fight enemy and dodge → loot → open skill panel → level up Bladecraft → save and reload.
 
 **Journey D — school choice:** Choose partial disclosure to Theo → read visible Trust change → progress to later authored dialogue → see branch acknowledgment.
 
@@ -550,15 +555,15 @@ If a tester cannot answer without being coached, fix onboarding and UI before ad
 
 **Exit condition:** Movement feels like a top-down game and interaction works across desktop and touch. No content production spree.
 
-### Milestone B — Bellwether combat
+### Milestone B — Night Splitter combat
 
-**Deliver:** Sword summon, 3-hit basic attack, dodge, Pulse, Health/Focus, Strayling, Watcher/Hollow behavior, defeat and reward flow, basic audio/particles.
+**Deliver:** Sword summon, 3-hit basic attack, dodge, Pulse, Health/Focus, Stray, Shadewalker/Crawler behavior, defeat and reward flow, basic audio/particles.
 
 **Exit condition:** A five-minute series of fights is satisfying without new artwork. If not, tune impact/timing/enemies.
 
 ### Milestone C — Playable town activities
 
-**Deliver:** Quarterlight Arcade location, Ghost Circuit full rules/result; Nightwood Public Library, Stacks 21 full rules/result; Phone Quick Visit for discovered locations; repeatable scores and XP.
+**Deliver:** Quarterlight Arcade location, Ghost Circuit full rules/result; Homewood Public Library, Stacks 21 full rules/result; Phone Quick Visit for discovered locations; repeatable scores and XP.
 
 **Exit condition:** New player can complete both mini-games and understand the result; veteran can finish one with tiny session overhead.
 
@@ -624,7 +629,7 @@ A developer picking this up should create these initial implementation tasks, in
 6. **Build Stacks 21 with deterministic rules and unit tests.**
 7. **Create a small saveable character state** and transactional skill XP for both mini-games.
 8. **Add Phone menu and discovered-venue Quick Visit.**
-9. **Connect Bellwether discovery and one school dialogue choice** to the world and saved flags.
+9. **Connect Night Splitter discovery and one school dialogue choice** to the world and saved flags.
 10. **Test first-time onboarding, touch controls, combat readability, and save/load.**
 
 Anything beyond this packet requires proof the initial slice is enjoyable, not merely functional.
@@ -642,3 +647,15 @@ A handoff recipient should know:
 - **How to verify it:** Milestone exit conditions, unit tests, browser journeys, and player playtests.
 
 The intended first deploy is a **real but small game**, not a landing page pretending to be one.
+
+
+## 18. Realm, sword, enemy, and relationship addendum (revised canon)
+
+- **Two realms:** Persist a world.realm of homewood or nightwood. Scene crossover should reuse map anchors with alternate palette, tile overlays, colliders, ambient FX and spawn data. The realm switch is a story interaction, not an unrestricted teleport. Quick Visit works from safe Homewood spaces.
+- **Player creation:** Force a one-time chosen displayName and boy/girl selection before the school intro. Store these in save; use safe text rendering and a centralized pronoun function. No hardcoded protagonist name.
+- **Sword:** Night Splitter is permanently equipped on story unlock and never replaced by random weapons. Use Edge, Ward and Rift upgrades; sprites and FX can be code-drawn.
+- **Monster families:** Strays (numerous weakest), Shadewalkers (shadow reaches Homewood), Howlers (false noise cues), Feeders (fear/Dread), Nighthounds (Feeder companions), Crawlers (wall/ceiling). Unit-test distinct state machines and fair tells. First slice may focus on Stray, Crawler, Shadewalker; add the other three once combat is fun.
+- **Boss plan:** Mistress Shade (school, first), Warden, Unseen King, Nyxara, Maw, Astrix, Crown Council (three distinct simultaneous boss entities). Boss list is planned content, not a claim they're coded.
+- **Romance:** Mara, Jessa, Theo and Adrian are peer-age interests. Either boy/girl can choose any. Separate friendship and opt-in romance flags. No sexualized student content.
+- **Story:** Ordinary cozy Homewood vs disturbing Nightwood drives all location names, quests, dialogue, light and sound. The Custodians monitor breaches and are morally complicated.
+- **Test gates:** Reload retains name, gender, safe location, realm, skills, unlocked sword, and mini-game scores; Shadewalker shadow effect can surface in Homewood; normal NPCs cannot be damaged; no stale retired proper nouns or double XP awards.
