@@ -13,34 +13,34 @@
 
 ## 1. Executive vision
 
-**Elevator pitch:** Nightwood follows the player character, a 17-year-old student at Homewood High in a fictional present-day American city. When a student vanishes during a strange school blackout, the player discovers Night Splitter, an ancient sword disguised among forgotten theater props. It lets him see and fight monsters slipping through a hidden layer of reality called Nightwood. the player must protect his friends and uncover why his school is the epicenter of a growing breach while still attending class, maintaining relationships, working, playing games around town, and trying to have a normal teenage life.
+**Elevator pitch:** **Nightwood** is a modern-day, top-down, supernatural RPG set in **Homewood**, a warm and familiar Alabama city. The player creates a high school student with their own **name, boy/girl identity, and appearance**. After discovering **The Night Splitter**, a magical sword concealed beneath the school auditorium, they cross into **Nightwood**, a dangerous shadow realm that mirrors Homewood. They must master sword and magic combat, unravel a mystery, and protect their hometown while still being a normal student.
 
-**Player fantasy:** You are not a knight in a medieval kingdom. You are a high school student who carries an impossible sword while worrying about a group project, a best friend's unanswered message, a part-time job, and whether anyone noticed the claw marks outside the gym.
+**Player fantasy:** One persistent customizable character, one familiar town with two very different faces, modern-day RuneScape-like skills, optional school friendships and romance, genuine playable arcade and library mini-games, and action combat that feels good without requiring a massive art library.
 
-**Structural reference:** The progression freedom of an MMO, the direct movement and readable fights of a light action RPG, the social rhythms of a school-life adventure, and the instant fun of an arcade collection. **Nightwood is not planned as a massively multiplayer online game for the first release.**
-
-**The most important differentiator:** The city isn't a loading screen between battles. A player may be a champion of the arcade, a skilled electronics fixer, an obsessive investigator, or a strong swordfighter, all within one persistent character. Mini-games are genuine games inside the town, not decorative XP buttons.
+**Core promise:** Save Homewood in a 30-minute adventure, or spend 30 seconds playing Ghost Circuit at the arcade. Both are valid ways to enjoy and grow the same character.
 
 ### 1.1 Non-negotiable design pillars
 
-1. **Two lives, one character.** Mundane school commitments and secret supernatural danger meaningfully affect quests, dialogue, access, and relationships, without turning the game into a homework simulator.
-2. **Player-directed time.** A 30-second play session is complete and satisfying. A 30-minute session supports meaningful exploration, combat, and story progress.
-3. **Hands-on gameplay.** The hero moves in a navigable overhead world and fights with a sword; the game must not devolve into a static menu-driven idle RPG.
-4. **Modern skill mastery.** Independent skills reflect recognizable present-day activities: research, electronics, fitness, gaming, cards, media, first aid, and so on.
-5. **The sword is the identity.** Night Splitter stays with Eli. It grows in techniques, appearance, and story significance instead of being replaced every few levels by disposable loot.
-6. **Small but convincing world.** Concentrated locations, clever reuse, distinctive lighting, memorable NPCs, and visual feedback beat enormous maps filled with assets we can't afford.
-7. **A reason to return, not an obligation.** Progress saves constantly. There are no login streak penalties, real-time energy gates, forced daily activities, or expiring rewards required to advance.
-8. **Clarity before complexity.** The main goals, available actions, rewards, and risks must be understandable within seconds. Hidden mechanics must not decide basic outcomes.
+1. **Homewood is home; Nightwood is the shadow realm.** Homewood is cozy, sociable, and bright; Nightwood shares its geography but changes it into something disturbing and hostile.
+2. **No predefined protagonist identity.** The player chooses their own name and boy/girl character. The story and dialogue use that choice consistently.
+3. **Ordinary life and secret life have equal value.** School, friends, family, hobbies and optional age-appropriate romance matter, but are not tedious mandatory chores.
+4. **True playable short sessions.** The arcade and library house real repeatable games, not idle rewards. Once discovered, venues have Quick Visit access.
+5. **Modern independent skills.** Athletics, Research, Electronics, Gaming, Card Sense, First Aid and more grow separately from Bladecraft and Channeling.
+6. **The Night Splitter is iconic.** This permanent sword gains sword and magic abilities and visible modifications, rather than being replaced by random loot.
+7. **Readable action.** Top-down movement, responsive sword hits, magic, dodge, telegraphed monsters and fair bosses are more important than fancy animation.
+8. **Asset-light, visually coherent.** Use modular overhead environments and code-generated silhouettes/particles. Nightwood can reuse Homewood layouts with transformed lighting, props and hazards.
+9. **Progress without punishment.** No daily login pressure, real-time school deadlines, energy gates, real-money gambling, or pay-to-win.
+10. **Build a focused slice first.** The full six-monster ecology and seven early bosses are canon, but not all need to be coded before the movement, sword, mini-games and saves are fun.
 
-### 1.2 Desired emotional experience
+### 1.2 Emotional experience
 
-A familiar school corridor feels different after the player discovers a monster standing at its far end. At the library, the same table can hold an ordinary card game in the afternoon and a research clue at night. A friend may be furious about being stood up for a school event because the player was saving a stranger. Progression should make the player feel **more capable**, while story choices make the world feel **more personal**.
+It should feel wonderful to walk back into warm, ordinary Homewood sunlight after narrowly escaping Nightwood's version of the same school hallway. A friend's invitation to play an arcade game or spend time together should feel just as real as gaining a powerful sword technique.
 
-### 1.3 What this is not
+### 1.3 What the first release is not
 
-Not an MMO launch, not an endless survival crafting game, not a deck battler, not an idle clicker, not a hard daily-schedule simulator, not a roguelike that wipes the character each run, and not a giant photorealistic open world. It should have depth without requiring enormous art or server infrastructure.
+Not a live MMO, not a forced school attendance simulator, not a giant photorealistic city, not an automatic idle game, not an asset-heavy animation production, and not a mandatory dating simulator. The early playable slice is an actual small overhead RPG with persistent skill growth and replayable leisure activities.
 
----
+**Terminology:** Game title/monster realm **Nightwood**; ordinary city **Homewood**; sword **The Night Splitter**; boundary-monitoring faction **The Custodians**. There is no original fixed-name protagonist. See the Story & World Bible v2 for precise canon.
 
 ## 2. Setting and fiction — canonical revised design
 
@@ -266,7 +266,7 @@ The player advances major time states intentionally through quests, resting, or 
 Nightwood should create pressure through **decisions and consequences**, not tedious chores.
 
 - **Trust (per relationship):** Friends respond to help, honesty, keeping promises, and how frequently the player disappears without explaining himself.
-- **Exposure (0–100):** How suspicious the school/community is of weird occurrences involving Eli. High Exposure adds rumors, extra surveillance, or alternative routes but does not permanently fail the game.
+- **Exposure (0–100):** How suspicious the school/community is of weird occurrences involving the player character. High Exposure adds rumors, extra surveillance, or alternative routes but does not permanently fail the game.
 - **School Standing (0–100):** A lightweight proxy for responsibilities, not individual math/biology grades. Earned through limited authored school tasks; affects teacher dialogue and access.
 - **Wellbeing:** A story-oriented condition with clear recovery options, not a constant hunger/sleep/mood timer.
 
