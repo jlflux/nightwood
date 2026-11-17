@@ -101,8 +101,10 @@ function placeStack(game,pile){
 function choosePartner(save,id){
  if(!PEERS[id])return false;
  // Player gender is deliberately irrelevant to all romance paths.
- save.romance={active:id};
- save.trust[id]=Math.max(0,(save.trust[id]||0))+1;
+ const visited={...((save.romance&&save.romance.visited)||{})};
+ if(!visited[id])save.trust[id]=Math.max(0,(save.trust[id]||0))+1;
+ visited[id]=true;
+ save.romance={active:id,visited};
  return true;
 }
 function normalizeSave(raw){
